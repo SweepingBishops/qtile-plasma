@@ -17,7 +17,9 @@ class Orient(Flag):
     HORIZONTAL = 0
     VERTICAL = 1
 
-HORIZONTAL, VERTICAL = Orient
+#HORIZONTAL, VERTICAL = Orient
+HORIZONTAL = Orient.HORIZONTAL
+VERTICAL = Orient.VERTICAL
 
 class Direction(Enum):
     UP = auto()
@@ -33,7 +35,11 @@ class Direction(Enum):
     def offset(self):
         return 1 if self in [self.RIGHT, self.DOWN] else -1
 
-UP, DOWN, LEFT, RIGHT = Direction
+#UP, DOWN, LEFT, RIGHT = Direction
+UP = Direction.UP
+DOWN = Direction.DOWN
+LEFT = Direction.LEFT
+RIGHT = Direction.RIGHT
 
 class AddMode(Flag):
     HORIZONTAL = 0
